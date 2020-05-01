@@ -2,7 +2,7 @@ def string_test(s):
     '''
     A function string_test that takes a parameter 's' which is a string and counts the number of 
     Upper and lowercase letters in the string.
-    
+
     Returns: The count of the upper and lower case letters 
     '''
     u = 0
