@@ -15,3 +15,5 @@ def string_test(s):
     return f'Number of Lowercase letters is {l}\n Number of Uppercase letters is {u}'
 
 print(string_test('The quick Brown Fox'))
+print(string_test('My name is Sodiq Agunbiade, I am your tutor for this cohort'))
+print(string_test('You are a Student of 30daysofcode'))
