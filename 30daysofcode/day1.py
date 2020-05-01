@@ -1,6 +1,7 @@
 def is_perfect_square(number):
     '''
     A function that takes in a parameter number and checks if it is a prime number.
+    
     Returns:True if perfect square and False not. 
     '''
     for i in range(number//2):
