@@ -12,7 +12,7 @@ def string_test(s):
             u += 1
         if i.islower():
             l += 1
-    return f'Number of Lowercase letters is {l}\n Number of Uppercase letters is {u}'
+    return f'Number of Lowercase letters is {l}\nNumber of Uppercase letters is {u}'
 
 print(string_test('The quick Brown Fox'))
 print(string_test('My name is Sodiq Agunbiade, I am your tutor for this cohort'))
