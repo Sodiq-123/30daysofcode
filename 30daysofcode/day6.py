@@ -17,6 +17,11 @@ def is_prime(num):
     return False
 
 def primeSum(num):
+    '''
+    A function that takes in a parameter num and gets the prime numbers using the is_prime function from
+    1 to the number.
+    Returns: The sum of the prime numbers in that range 
+    '''
     sum_primes = [i for i in range(num) if is_prime(i)]
     return sum(sum_primes)
 
