@@ -1,4 +1,4 @@
 def fastSum(n):
     return n*(n+1)//2
 
-print()
+print(fastSum(1,000))
