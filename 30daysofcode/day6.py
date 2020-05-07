@@ -1,4 +1,9 @@
 def is_prime(num):
+    '''
+    A function that takes in a parameter and checks if it is a prime number
+
+    Returns: True if num is prime and False if num is not prime.
+    '''
     if num > 1:
         if num == 2:
             return True
