@@ -25,7 +25,7 @@ def primeSum(num):
     sum_primes = [i for i in range(num) if is_prime(i)]
     return sum(sum_primes)
 
-print(primeSum(10))
+print(primeSum(10)) #17
 print(primeSum(20))
 print(primeSum(100))
 print(primeSum(1000000))
