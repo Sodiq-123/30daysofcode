@@ -8,4 +8,4 @@ def averageMultiple(num):
     return sum(x)/len(x)
 
 print(averageMultiple(10)) #5.75
-print(averageMultiple(20))
+print(averageMultiple(20)) #9.75
