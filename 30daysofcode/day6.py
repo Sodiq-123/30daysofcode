@@ -26,6 +26,6 @@ def primeSum(num):
     return sum(sum_primes)
 
 print(primeSum(10)) #17
-print(primeSum(20))
+print(primeSum(20)) #77
 print(primeSum(100))
 print(primeSum(1000000))
