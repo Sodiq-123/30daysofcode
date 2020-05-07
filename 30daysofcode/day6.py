@@ -27,5 +27,5 @@ def primeSum(num):
 
 print(primeSum(10)) #17
 print(primeSum(20)) #77
-print(primeSum(100))
+print(primeSum(100)) #1060
 print(primeSum(1000000))
