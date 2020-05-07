@@ -19,4 +19,3 @@ def time_checker(fastSum):
     return a 
 
 print(time_checker(fastSum))
-# print(time_checker(fastSum)<4.000000000000e-06) == True
