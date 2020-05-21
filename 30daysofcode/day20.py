@@ -6,3 +6,11 @@ def create_arr(rowNum,colNum):
         for col in range(colNum):
             multilist[row][col]= row*col
     return multilist
+
+def error(func, num, n):
+    try:
+        return func(num, n)
+    except AssertionError:
+        return 1
+error(create_arr, 'a', -1)==1 # 3 points
+error(create_arr, -1, -2) ==1 #3points
