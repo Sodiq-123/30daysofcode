@@ -3,3 +3,11 @@ def var_sort(*args):
     return sorted([tuple(x) for x in args],key=lambda x: (x[0], x[1], x[2]))
 
 print(var_sort(('Tom',19,80),('John',20,90),('Jony',17,91),('Jony',17,93)))
+
+def error(func, name, a, s):
+    try:
+        return func(name, a, s)
+    except AssertionError:
+        return 1
+print(error(var_sort, 'Tom', -1, 12))==1 # 3 points
+print(error(var_sort, 'John', -2, 11)) ==1 #3points
