@@ -10,10 +10,10 @@ def create_arr(rowNum,colNum):
 print(np.array(create_arr(5, 3)))
 
 
-# def error(func, num, n):
-#     try:
-#         return func(num, n)
-#     except AssertionError:
-#         return 1
-# error(create_arr, 'a', -1)==1 # 3 points
-# error(create_arr, -1, -2) ==1 #3points
+def error(func, num, n):
+    try:
+        return func(num, n)
+    except AssertionError:
+        return 1
+error(create_arr, 'a', -1)==1 # 3 points
+error(create_arr, -1, -2) ==1 #3points
