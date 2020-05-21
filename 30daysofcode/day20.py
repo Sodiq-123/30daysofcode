@@ -1,3 +1,4 @@
+import numpy as np
 def create_arr(rowNum,colNum):
     assert type(rowNum)==int and type(colNum)==int and rowNum > 0 and colNum > 0, 'Invalid Input'
     multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
@@ -6,11 +7,13 @@ def create_arr(rowNum,colNum):
         for col in range(colNum):
             multilist[row][col]= row*col
     return multilist
+print(np.array(create_arr(5, 3)))
 
-def error(func, num, n):
-    try:
-        return func(num, n)
-    except AssertionError:
-        return 1
-error(create_arr, 'a', -1)==1 # 3 points
-error(create_arr, -1, -2) ==1 #3points
+
+# def error(func, num, n):
+#     try:
+#         return func(num, n)
+#     except AssertionError:
+#         return 1
+# error(create_arr, 'a', -1)==1 # 3 points
+# error(create_arr, -1, -2) ==1 #3points
