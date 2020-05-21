@@ -10,4 +10,4 @@ def error(func, name, a, s):
     except AssertionError:
         return 1
 print(error(var_sort, 'Tom', -1, 12))==1 # 3 points
-print(error(var_sort, 'John', -2, 11)) ==1 #3points
+print(error(var_sort, 6, -2, 11)) ==1 #3points
