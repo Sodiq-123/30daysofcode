@@ -1,6 +1,7 @@
 class circle:
     '''
-    A class definition that has  two methods which computes the Circumference and Area of a circle respectively
+    A class definition that has  two methods which computes the Circumference and 
+    Area of a circle of the radius passed in respectively.
     '''
     def __init__(self, radius):
         self.radius = radius
