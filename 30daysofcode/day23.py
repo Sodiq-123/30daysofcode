@@ -1,4 +1,4 @@
-class circle:
+class Circle:
     '''
     A class definition that has  two methods which computes the Circumference and 
     Area of a circle of the radius passed in respectively.
@@ -12,5 +12,5 @@ class circle:
     def computeArea(self):
         return f'{int(round(22/7 * self.radius**2))}cm2'
 
-a = circle(7)
+a = Circle(7)
 print(a.computeCircum())
