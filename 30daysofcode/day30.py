@@ -12,7 +12,8 @@
     1) In method threesum, the array can take in both positive and negative numbers
     and they must be integers only.
     2) In method threesum, it can be more then one pair that sums up to zero. therefore the output 
-    should be list of lists as the case may be. 
+    should be list of lists as the case may be.
+    3) Your function should return an empty array if the array does not reach the condition
    '''
 
 class ArrayOperation:
@@ -45,11 +46,11 @@ class ArrayOperation:
                 i += 1
         return result
 
+# 1 point for submission
 a = ArrayOperation()
-print(a.twoSum((10,20,10,40,50,60,70), 50))
-print(a.twoSum([10,20,10,40,50,60,70], 50))
-print(a.threeSum((10,20,10,40,50,60,70)))
+print(a.twoSum((10,20,10,40,50,60,70), 50)==(2, 3)) #2 points
+print(a.twoSum([10,20,10,40,50,60,70], 50)==(2, 3)) #2 points
+print(a.threeSum((10,20,10,40,50,60,70))==[]) #2 points
 b = ArrayOperation()
-print(b.threeSum([-25, -10, -7, -3, 2, 4, 8, 10]))
-
-
+print(b.threeSum([-25, -10, -7, -3, 2, 4, 8, 10])==[[-10, 2, 8], [-7, -3, 10]]) #3 points
+print(b.threeSum([-25, -10, -7, -3, 2, 4, 8, 10, 6, -9, 4, -10, 7, 65, -55])==[[-55, -10, 65], [-10, 2, 8], [-10, 4, 6], [-9, 2, 7], [-7, -3, 10]]) #5 points
