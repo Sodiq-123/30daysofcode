@@ -21,9 +21,9 @@ class ArrayOperation:
         lookup = {}
         for i, num in enumerate(nums):
             if target - num in lookup:
-                return (lookup[target - num], i )
+                return (lookup[target - num], i)
             lookup[num] = i
-        return lookup
+        return tuple(lookup)
 
     def threeSum(self, nums):
         nums, result, i = sorted(nums), [], 0
@@ -48,7 +48,7 @@ class ArrayOperation:
 
 # 1 point for submission
 a = ArrayOperation()
-print(a.twoSum((10,20,10,40,50,60,70), 50)==(2, 3)) #2 points
+print(a.twoSum((10,20,10,40,50,60,70), 50)==((2, 3))) #2 points
 print(a.twoSum([10,20,10,40,50,60,70], 50)==(2, 3)) #2 points
 print(a.threeSum((10,20,10,40,50,60,70))==[]) #2 points
 b = ArrayOperation()
