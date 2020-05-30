@@ -1,25 +1,21 @@
 '''
     Define a python class ArrayOperation that has two methods twosum and threesum
-    Both methods should take in an array of numbers
-    The first method twosum should take in the two parameters 
+    Both methods should take in an array of numbers(i.e either a tuple or a list)
+    The first method twosum should take in two parameters 
     which is the array and the target and find a pair of elements 
-    (indices of the two numbers) from the given array whose
+    (indices of the two numbers) as a tuple from the given array whose
     sum equals to the target number.
-    The second method threesum should take in the parameter array 
-    and find the three elements as a pair from a given array that 
-    sum to zero from the array.
+    The second method threesum should take in one parameter as an array 
+    and find the three elements as a pair in a list of list 
+    from the given array that sum to zero in the array.
     NOTE: 
     1) In method threesum, the array can take in both positive and negative numbers
     and they must be integers only.
-    2) In method two, it can be more then one pair that sums up to zero.
+    2) In method threesum, it can be more then one pair that sums up to zero. therefore the output 
+    should be list of lists as the case may be. 
    '''
 
 class ArrayOperation:
-    def __init__(self, nums, target):
-        self.nums = nums
-        self.target = target
-        pass
-
     def twoSum(self, nums, target):
         lookup = {}
         for i, num in enumerate(nums):
@@ -49,6 +45,11 @@ class ArrayOperation:
                 i += 1
         return result
 
-a = ArrayOperation((10,20,10,40,50,60,70), 50)
-print(a.twoSum())
+a = ArrayOperation()
+print(a.twoSum((10,20,10,40,50,60,70), 50))
+print(a.twoSum([10,20,10,40,50,60,70], 50))
+print(a.threeSum((10,20,10,40,50,60,70)))
+b = ArrayOperation()
+print(b.threeSum([-25, -10, -7, -3, 2, 4, 8, 10]))
+
 
