@@ -25,26 +25,12 @@ class ArrayOperation:
             lookup[num] = i
         return tuple(lookup)
 
-    def threeSum(self, nums):
-        nums, result, i = sorted(nums), [], 0
-        while i < len(nums) - 2:
-            j, k = i + 1, len(nums) - 1
-            while j < k:
-                if nums[i] + nums[j] + nums[k] < 0:
-                    j += 1
-                elif nums[i] + nums[j] + nums[k] > 0:
-                    k -= 1
-                else:
-                    result.append([nums[i], nums[j], nums[k]])
-                    j, k = j + 1, k - 1
-                    while j < k and nums[j] == nums[j - 1]:
-                        j += 1
-                    while j < k and nums[k] == nums[k + 1]:
-                        k -= 1
-            i += 1
-            while i < len(nums) - 2 and nums[i] == nums[i - 1]:
-                i += 1
-        return result
+    def threeSum(self, nums, k=0):
+        return list(map(list, set([tuple(sorted([x,y,z])) 
+                    for (i,x) in enumerate(nums) 
+                    for (j,y) in enumerate(nums) 
+                    for (l,z) in enumerate(nums) 
+                    if i > j > l and x+y+z == k])))
 
 # 1 point for submission
 a = ArrayOperation()
@@ -52,5 +38,6 @@ print(a.twoSum((20,10,40,50,60,70), 50)==(1, 2)) #2 points
 print(a.twoSum([10,20,10,40,50,60,70], 50)==(2, 3)) #2 points
 print(a.threeSum((10,20,10,40,50,60,70))==[]) #2 points
 b = ArrayOperation()
-print(b.threeSum([-25, -10, -7, -3, 2, 4, 8, 10])==[[-10, 2, 8], [-7, -3, 10]]) #3 points
-print(b.threeSum([-25, -10, -7, -3, 2, 4, 8, 10, 6, -9, 4, -10, 7, 65, -55])==[[-55, -10, 65], [-10, 2, 8], [-10, 4, 6], [-9, 2, 7], [-7, -3, 10]]) #5 points
+print(b.threeSum([-25, -10, -7, -3, 2, 4, 8, 10])==[[-7, -3, 10], [-10, 2, 8]]) #3 points
+print(b.threeSum([-25, -10, -7, -3, 2, 4, 8, 10, 6, -9, 4, -10, 7, 65, -55])==[[-9, 2, 7], [-10, 4, 6], [-10, 2, 8], [-7, -3, 10], [-55, -10, 65]]) #5 points
+
